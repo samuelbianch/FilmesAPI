@@ -44,3 +44,9 @@ D:\apps\FilmesAPI\FilmesAPI\obj\Debug\net5.0\refint\FilmesAPI.dll
 D:\apps\FilmesAPI\FilmesAPI\obj\Debug\net5.0\FilmesAPI.pdb
 D:\apps\FilmesAPI\FilmesAPI\obj\Debug\net5.0\FilmesAPI.genruntimeconfig.cache
 D:\apps\FilmesAPI\FilmesAPI\obj\Debug\net5.0\ref\FilmesAPI.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\AutoMapper.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\apps\FilmesAPI\FilmesAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
