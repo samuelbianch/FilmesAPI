@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\apps\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {}
+    "D:\\apps\\FilmesAPI\\FilmesApi\\FilmesApi.csproj": {}
   },
   "projects": {
-    "D:\\apps\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {
+    "D:\\apps\\FilmesAPI\\FilmesApi\\FilmesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\apps\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
-        "projectName": "FilmesAPI",
-        "projectPath": "D:\\apps\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+        "projectUniqueName": "D:\\apps\\FilmesAPI\\FilmesApi\\FilmesApi.csproj",
+        "projectName": "FilmesApi",
+        "projectPath": "D:\\apps\\FilmesAPI\\FilmesApi\\FilmesApi.csproj",
         "packagesPath": "C:\\Users\\samuel\\.nuget\\packages\\",
-        "outputPath": "D:\\apps\\FilmesAPI\\FilmesAPI\\obj\\",
+        "outputPath": "D:\\apps\\FilmesAPI\\FilmesApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
               "version": "[12.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[5.0.17, )"
             },

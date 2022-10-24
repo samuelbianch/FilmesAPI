@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmesApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -14,5 +15,7 @@ namespace FilmesAPI.Models
         public string Nome { get; set; }
         public int EnderecoFK { get; set; }
         public int GerenteFK { get; set; }
+        public virtual Endereco Endereco { get; set; }
+        public int EnderecoId { get; set; }
     }
 }
