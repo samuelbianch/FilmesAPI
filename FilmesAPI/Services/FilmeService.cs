@@ -28,7 +28,7 @@ namespace FilmesApi.Services
             return _mapper.Map<ReadFilmeDto>(filme);
         }
 
-        internal List<ReadFilmeDto> RecuperaFilmes(int? classificacaoEtaria)
+        public List<ReadFilmeDto> RecuperaFilmes(int? classificacaoEtaria)
         {
             List<Filme> filmes;
             if (classificacaoEtaria == null)
@@ -47,7 +47,7 @@ namespace FilmesApi.Services
             return null;
         }
 
-        internal ReadFilmeDto RecuperaFilmesPorId(int id)
+        public ReadFilmeDto RecuperaFilmesPorId(int id)
         {
             Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
             if (filme != null)
