@@ -4,6 +4,7 @@ using FilmesApi.Data.Dtos.Endereco;
 using FilmesApi.Models;
 using FilmesAPI.Data.Dtos;
 using FilmesAPI.Models;
+using FluentResults;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,30 @@ namespace FilmesApi.Services
             }
 
             return null;
+        }
+
+        public Result AtualizaEndereco(int id, UpdateEnderecoDto enderecoDto)
+        {
+            Endereco endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
+            if (endereco == null)
+            {
+                return Result.Fail("Endereço não encontrado");
+            }
+            _mapper.Map(enderecoDto, endereco);
+            _context.SaveChanges();
+            return Result.Ok();
+        }
+
+        public Result DeletaEndereco(int id)
+        {
+            Endereco endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
+            if (endereco == null)
+            {
+                return Result.Fail("Endereço não encontrado");
+            }
+            _context.Remove(endereco);
+            _context.SaveChanges();
+            return Result.Ok();
         }
     }
 }

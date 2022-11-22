@@ -7,4 +7,6 @@ For running the API:
 $ cd FilmesAPI
 $ dotnet run
 ```
+
+
 For more informations: samuelbianch38@gmail.com

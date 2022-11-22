@@ -4,6 +4,7 @@ using FilmesApi.Data;
 using FilmesApi.Data.Dtos.Endereco;
 using FilmesApi.Models;
 using FilmesApi.Services;
+using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -49,13 +50,8 @@ namespace FilmesAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult AtualizaEndereco(int id, [FromBody] UpdateEnderecoDto enderecoDto)
         {
-            Endereco endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
-            if (endereco == null)
-            {
-                return NotFound();
-            }
-            _mapper.Map(enderecoDto, endereco);
-            _context.SaveChanges();
+            Result resultado = _enderecoService.AtualizaEndereco(id, enderecoDto);
+            if(resultado.IsFailed) return NotFound();
             return NoContent();
         }
 
@@ -63,13 +59,8 @@ namespace FilmesAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeletaEndereco(int id)
         {
-            Endereco endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
-            if (endereco == null)
-            {
-                return NotFound();
-            }
-            _context.Remove(endereco);
-            _context.SaveChanges();
+            Result resultado = _enderecoService.DeletaEndereco(id);
+            if (resultado.IsFailed) return NotFound();
             return NoContent();
         }
 

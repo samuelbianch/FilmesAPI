@@ -56,6 +56,44 @@
           }
         }
       },
+      "FluentAssertions/6.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "FluentResults/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/FluentResults.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.dll": {}
+        }
+      },
+      "FluentResults.Extensions.FluentAssertions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentAssertions": "6.7.0",
+          "FluentResults": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentResults.Extensions.FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.Extensions.FluentAssertions.dll": {}
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "compile": {
@@ -2283,6 +2321,64 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "FluentAssertions/6.7.0": {
+      "sha512": "PWbow/R3MnYDP8UW7zh/w80rGb+1NufGoNJeuzouTo2bqpvwNTFxbDwF6XWfFZ5IuquL2225Um+qSyZ8jVsT+w==",
+      "type": "package",
+      "path": "fluentassertions/6.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "fluentassertions.6.7.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/net6.0/FluentAssertions.dll",
+        "lib/net6.0/FluentAssertions.pdb",
+        "lib/net6.0/FluentAssertions.xml",
+        "lib/netcoreapp2.1/FluentAssertions.dll",
+        "lib/netcoreapp2.1/FluentAssertions.pdb",
+        "lib/netcoreapp2.1/FluentAssertions.xml",
+        "lib/netcoreapp3.0/FluentAssertions.dll",
+        "lib/netcoreapp3.0/FluentAssertions.pdb",
+        "lib/netcoreapp3.0/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml"
+      ]
+    },
+    "FluentResults/3.0.0": {
+      "sha512": "/IYIdnWpdTLjTV0zBsEU/kzI57/a40KSBso43L1xo6SvoRnQMsvKhG2Yo0iwIM/LcbAX0GZwBcoA4IRv9K17DQ==",
+      "type": "package",
+      "path": "fluentresults/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentResults-Icon-128.png",
+        "fluentresults.3.0.0.nupkg.sha512",
+        "fluentresults.nuspec",
+        "lib/netstandard2.0/FluentResults.dll",
+        "lib/netstandard2.1/FluentResults.dll"
+      ]
+    },
+    "FluentResults.Extensions.FluentAssertions/2.1.0": {
+      "sha512": "v8iKunDAVTRW5n2tKPByszDmFINdgpthXJyP4eeB1GgaoCE6AqKM+CwYJPUomQd9UPBC8s+N2LvV/RC9tUg9aw==",
+      "type": "package",
+      "path": "fluentresults.extensions.fluentassertions/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentResults-Icon-128.png",
+        "fluentresults.extensions.fluentassertions.2.1.0.nupkg.sha512",
+        "fluentresults.extensions.fluentassertions.nuspec",
+        "lib/netstandard2.0/FluentResults.Extensions.FluentAssertions.dll",
+        "lib/netstandard2.1/FluentResults.Extensions.FluentAssertions.dll"
       ]
     },
     "Google.Protobuf/3.19.4": {
@@ -7093,6 +7189,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "FluentResults.Extensions.FluentAssertions >= 2.1.0",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
@@ -7142,6 +7239,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.0, )"
+          },
+          "FluentResults.Extensions.FluentAssertions": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

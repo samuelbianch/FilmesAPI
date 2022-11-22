@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "7kKbB/NYOVjHl1uMvZl1fj9HSwPUpXWsDUA16iCZ4w4nL9KmQOMKhwaUh400G7FzEjvfatAJvP8stwG2Fuxtlg==",
+  "dgSpecHash": "S1bF4wiUbPipE768YdEOJNUzHbh8xAqrhpsRBYhL5NoYcGjyPswluKQ2MFgCVXZwcSu2c1q3odLsEuIm3QnT+w==",
   "success": true,
   "projectFilePath": "D:\\apps\\FilmesAPI\\FilmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samuel\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\samuel\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\samuel\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\samuel\\.nuget\\packages\\fluentassertions\\6.7.0\\fluentassertions.6.7.0.nupkg.sha512",
+    "C:\\Users\\samuel\\.nuget\\packages\\fluentresults\\3.0.0\\fluentresults.3.0.0.nupkg.sha512",
+    "C:\\Users\\samuel\\.nuget\\packages\\fluentresults.extensions.fluentassertions\\2.1.0\\fluentresults.extensions.fluentassertions.2.1.0.nupkg.sha512",
     "C:\\Users\\samuel\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\samuel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\samuel\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
