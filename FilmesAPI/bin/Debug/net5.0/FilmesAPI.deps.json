@@ -34,6 +34,7 @@
       "FilmesApi/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "FluentResults.Extensions.FluentAssertions": "2.1.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
@@ -374,6 +375,46 @@
         },
         "compile": {
           "lib/netstandard1.5/Castle.Core.dll": {}
+        }
+      },
+      "FluentAssertions/6.7.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.7.0.0",
+            "fileVersion": "6.7.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {}
+        }
+      },
+      "FluentResults/3.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentResults.dll": {}
+        }
+      },
+      "FluentResults.Extensions.FluentAssertions/2.1.0": {
+        "dependencies": {
+          "FluentAssertions": "6.7.0",
+          "FluentResults": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.Extensions.FluentAssertions.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentResults.Extensions.FluentAssertions.dll": {}
         }
       },
       "Google.Protobuf/3.19.4": {
@@ -3239,6 +3280,27 @@
       "sha512": "sha512-zanbjWC0Y05gbx4eGXkzVycOQqVOFVeCjVsDSyuao9P4mtN1w3WxxTo193NGC7j3o2u3AJRswaoC6hEbnGACnQ==",
       "path": "castle.core/4.4.1",
       "hashPath": "castle.core.4.4.1.nupkg.sha512"
+    },
+    "FluentAssertions/6.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PWbow/R3MnYDP8UW7zh/w80rGb+1NufGoNJeuzouTo2bqpvwNTFxbDwF6XWfFZ5IuquL2225Um+qSyZ8jVsT+w==",
+      "path": "fluentassertions/6.7.0",
+      "hashPath": "fluentassertions.6.7.0.nupkg.sha512"
+    },
+    "FluentResults/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/IYIdnWpdTLjTV0zBsEU/kzI57/a40KSBso43L1xo6SvoRnQMsvKhG2Yo0iwIM/LcbAX0GZwBcoA4IRv9K17DQ==",
+      "path": "fluentresults/3.0.0",
+      "hashPath": "fluentresults.3.0.0.nupkg.sha512"
+    },
+    "FluentResults.Extensions.FluentAssertions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v8iKunDAVTRW5n2tKPByszDmFINdgpthXJyP4eeB1GgaoCE6AqKM+CwYJPUomQd9UPBC8s+N2LvV/RC9tUg9aw==",
+      "path": "fluentresults.extensions.fluentassertions/2.1.0",
+      "hashPath": "fluentresults.extensions.fluentassertions.2.1.0.nupkg.sha512"
     },
     "Google.Protobuf/3.19.4": {
       "type": "package",

@@ -52,3 +52,6 @@ D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\ZstdNet.dll
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Castle.Core.dll
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentAssertions.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentResults.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentResults.Extensions.FluentAssertions.dll

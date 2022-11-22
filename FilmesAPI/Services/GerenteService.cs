@@ -5,6 +5,7 @@ using FilmesApi.Models;
 using FilmesAPI.Data.Dtos;
 using FilmesAPI.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FilmesApi.Services
@@ -20,13 +21,20 @@ namespace FilmesApi.Services
             _mapper = mapper;
         }
 
-        public ReadGerenteDto AdicionaGerente(ReadGerenteDto gerenteDto)
+        public ReadGerenteDto AdicionaGerente(CreateGerenteDto gerenteDto)
         {
             Gerente gerente = _mapper.Map<Gerente>(gerenteDto);
             _context.Gerentes.Add(gerente);
             _context.SaveChanges();
 
             return _mapper.Map<ReadGerenteDto>(gerente);
+        }
+
+        public List<ReadGerenteDto> RecuperaGerente()
+        {
+            List<Gerente> gerente = _context.Gerentes.ToList();
+            if(gerente == null) return null;
+            return _mapper.Map<List<ReadGerenteDto>>(gerente);
         }
 
         public ReadGerenteDto RecuperaGerentePorId(int id)

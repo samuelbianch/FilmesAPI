@@ -29,6 +29,13 @@ namespace FilmesApi.Services
             return _mapper.Map<ReadSessaoDto>(sessao);
         }
 
+        public List<ReadSessaoDto> RecuperaSessoes()
+        {
+            List<Sessao> sessao = _context.Sessoes.ToList();
+            if (sessao == null) return null;
+            return _mapper.Map<List<ReadSessaoDto>>(sessao);
+        }
+
         public ReadSessaoDto RecuperaSessoesPorId(int id)
         {
             Sessao sessao = _context.Sessoes.FirstOrDefault(sessao => sessao.Id == id);

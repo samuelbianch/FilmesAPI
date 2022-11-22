@@ -31,13 +31,13 @@ namespace FilmesAPI.Controllers
             return CreatedAtAction(nameof(RecuperaEnderecosPorId), new { Id = readDto.Id }, readDto);
         }
 
-        /*
         [HttpGet]
-        public IEnumerable<Endereco> RecuperaEnderecos()
+        public IActionResult RecuperaEnderecos()
         {
-            //Ajusatar este método
+            List<ReadEnderecoDto> readDto = _enderecoService.RecuperaEnderecos();
+            if (readDto == null) return NotFound();
+            return Ok(readDto);
         }
-        */
 
         [HttpGet("{id}")]
         public IActionResult RecuperaEnderecosPorId(int id)

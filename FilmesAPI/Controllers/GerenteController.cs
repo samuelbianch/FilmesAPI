@@ -23,7 +23,7 @@ namespace FilmesApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionaGerente([FromBody] CreateGerenteDto gerenteDto)
+        public IActionResult AdicionaGerente(CreateGerenteDto gerenteDto)
         {
             ReadGerenteDto readDto = _gerenteService.AdicionaGerente(gerenteDto);
 
@@ -31,9 +31,11 @@ namespace FilmesApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Gerente> RecuperaGerente()
+        public IActionResult RecuperaGerente()
         {
-            return _context.Gerentes;
+            List<ReadGerenteDto> gerente = _gerenteService.RecuperaGerente();
+            if (gerente == null) return NotFound();
+            return Ok(gerente);
         }
 
         [HttpGet("{id}")]
