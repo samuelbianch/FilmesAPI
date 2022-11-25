@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using UsuariosAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using UsuariosAPI.Services;
 
 namespace UsuariosAPI
 {
@@ -26,6 +27,8 @@ namespace UsuariosAPI
         {
             services.AddDbContext<UserDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("UsuarioConnection")));
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>().AddEntityFrameworkStores<UserDbContext>();
+            services.AddScoped<CadastroService, CadastroService>();
+            services.AddScoped<LoginService, LoginService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen();
