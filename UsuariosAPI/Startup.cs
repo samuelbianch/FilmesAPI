@@ -32,6 +32,7 @@ namespace UsuariosAPI
             services.AddScoped<TokenService, TokenService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen();
         }
 
