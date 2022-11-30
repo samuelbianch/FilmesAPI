@@ -10,6 +10,7 @@ using System;
 using UsuariosAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using UsuariosAPI.Services;
+using Microsoft.OpenApi.Models;
 
 namespace UsuariosAPI
 {
@@ -26,14 +27,17 @@ namespace UsuariosAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<UserDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("UsuarioConnection")));
+            services.AddScoped<LogoutService, LogoutService>();
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>().AddEntityFrameworkStores<UserDbContext>();
             services.AddScoped<CadastroService, CadastroService>();
             services.AddScoped<LoginService, LoginService>();
             services.AddScoped<TokenService, TokenService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "UsuariosApi", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

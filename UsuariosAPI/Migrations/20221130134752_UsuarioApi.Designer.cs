@@ -9,8 +9,8 @@ using UsuariosAPI.Data;
 namespace UsuariosAPI.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20221129193736_Criando Usuarios")]
-    partial class CriandoUsuarios
+    [Migration("20221130134752_UsuarioApi")]
+    partial class UsuarioApi
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -208,6 +208,23 @@ namespace UsuariosAPI.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("UsuariosAPI.Models.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
