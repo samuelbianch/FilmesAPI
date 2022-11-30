@@ -7,6 +7,7 @@ using FluentResults;
 using UsuariosAPI.Data.Request;
 using System;
 using System.Linq;
+using System.Web;
 
 namespace UsuariosAPI.Services
 {
@@ -14,11 +15,13 @@ namespace UsuariosAPI.Services
     {
         private IMapper _mapper;
         private UserManager<IdentityUser<int>> _userManager;
+        private EmailService _emailService;
 
-        public CadastroService(IMapper mapper, UserManager<IdentityUser<int>> userManager)
+        public CadastroService(IMapper mapper, UserManager<IdentityUser<int>> userManager, EmailService emailService)
         {
             _mapper = mapper;
             _userManager = userManager;
+            _emailService = emailService;
         }
 
         public Result CadastraUsuario(CreateUsuarioDto createDto)
@@ -29,6 +32,8 @@ namespace UsuariosAPI.Services
             if (resultadoIdentity.Result.Succeeded) 
             {
                 string code = _userManager.GenerateEmailConfirmationTokenAsync(usuarioIdentity).Result;
+                string endedCode = HttpUtility.UrlEncode(code);
+                _emailService.EnviarEmail(new[] { usuarioIdentity.Email }, "Link de Ativação", usuarioIdentity.Id, endedCode);
                 return Result.Ok().WithSuccess(code).WithSuccess(code);
             } 
             return Result.Fail("Falha ao cadastrar usuário");
