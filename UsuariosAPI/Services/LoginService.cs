@@ -33,5 +33,17 @@ namespace UsuariosAPI.Services
             }
             return Result.Fail("Falha ao fazer login!");
         }
+
+        public Result SolicitaResetSenhaUsuario(SolicitaResetRequest request)
+        {
+            IdentityUser<int> identityUser = _siginInManager.UserManager.Users.FirstOrDefault(u => u.NormalizedEmail == request.Email.ToUpper());
+            if(identityUser != null)
+            {
+                string codigoDeRecuperacao = _siginInManager.UserManager.GeneratePasswordResetTokenAsync(identityUser).Result;
+                return Result.Ok().WithSuccess(codigoDeRecuperacao);
+            }
+
+            return Result.Fail("Falha ao solicitar redefinição");
+        }
     }
 }
