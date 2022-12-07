@@ -55,3 +55,12 @@ D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxi
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentAssertions.dll
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentResults.dll
 D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\FluentResults.Extensions.FluentAssertions.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\apps\FilmesAPI\FilmesApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
