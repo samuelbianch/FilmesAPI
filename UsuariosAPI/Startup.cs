@@ -11,6 +11,7 @@ using UsuariosAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using UsuariosAPI.Services;
 using Microsoft.OpenApi.Models;
+using UsuariosAPI.Models;
 
 namespace UsuariosAPI
 {
@@ -28,7 +29,7 @@ namespace UsuariosAPI
         {
             services.AddDbContext<UserDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("UsuarioConnection")));
             services.AddScoped<LogoutService, LogoutService>();
-            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
+            services.AddIdentity<CustomIdentityUser, IdentityRole<int>>(
                     opt => opt.SignIn.RequireConfirmedEmail = true
                 ).AddEntityFrameworkStores<UserDbContext>()
                 .AddDefaultTokenProviders();
